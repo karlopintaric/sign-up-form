@@ -133,12 +133,14 @@ input {
     font-weight: 600;
     font-family: inherit;
     border: 1px solid #E5E7EB;
+    margin: 2px;
 }
 
 input:focus {
     box-shadow: 3px 3px 5px lightgray;
     outline: none;
     border: 2px solid #4475b2;
+    margin: 0;
 }
 
 .bottom {
@@ -168,4 +170,17 @@ button {
 .bottom a:visited {
     color: #596D48;
     font-weight: 700;
+}
+
+input:user-invalid {
+    border: 2px solid red;
+    box-shadow: 3px 3px 5px lightgray;
+    margin: 0;
+}
+
+input:user-invalid + span::before {
+    content: "* Invalid data";
+    color: red;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
