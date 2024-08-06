@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .main {
@@ -22,7 +22,7 @@ body {
 }
 
 .left {
-    flex-grow: 1;
+    flex: 1;
     background-image: url('./static/background-image.jpg');
     height: 100vh;
     background-size: cover;
@@ -34,7 +34,11 @@ body {
 }
 
 .right {
-    flex-grow: 3;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #f0f0f0;
 }
 
 .logo {
@@ -68,3 +72,100 @@ body {
     color: white;
 }
 
+.description {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: start;
+    line-height: 1.3;
+}
+
+p + p {
+    margin-top: 32px;
+}
+
+.top {
+    padding: 128px 64px 32px;
+    width: 75%;
+}
+
+.middle {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 32px 64px;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+form {
+    width: 75%;
+}
+
+.form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 64px;
+}
+
+.form-inputs > div {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    min-width: 25%;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+label {
+    font-size: 0.75rem;
+    color: dimgray;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+input {
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: 600;
+    font-family: inherit;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    box-shadow: 3px 3px 5px lightgray;
+    outline: none;
+    border: 2px solid #4475b2;
+}
+
+.bottom {
+    padding: 32px 64px;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 16px 46px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border-radius: 6px;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+}
+
+.bottom p {
+    margin-top: 32px;
+    font-weight: 600px;
+}
+
+.bottom a:link,
+.bottom a:visited {
+    color: #596D48;
+    font-weight: 700;
+}
